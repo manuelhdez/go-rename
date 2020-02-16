@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func ObtenerArchivos(ruta, validos string) map[int]Archivo {
+func ObtenerArchivos(ruta, validos string) ArchivoMap {
 	archivos := make(map[int]Archivo)
 
 	err := filepath.Walk(ruta, procesarRuta(validos, &archivos))
